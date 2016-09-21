@@ -2,7 +2,7 @@
 
 My name is Bevis Shen, this is my personal web page(for node.js, gulp, express and some demo).😊
 
-#### Installing Dependent Packages
+## Installing Dependent Packages
 
 To install the node packages, and also keep them updated, execute the following command while in the server root directory.
 
@@ -10,7 +10,7 @@ To install the node packages, and also keep them updated, execute the following 
 > npm install
 ```
 
-#### Running the server
+## Running the server
 
 ```
 > gulp overlord
