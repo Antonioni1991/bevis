@@ -40,4 +40,17 @@ $(function () {
             }
         }
     });
+    // test 函数就作为对象被赋值了a、b、c三个属性——很明显，这就是属性的集合
+    var fn = function () {
+        alert(100);
+    };
+    fn.a = 10;
+    fn.b = function () {
+        alert(123);
+    };
+    fn.c = {
+        name: "王福朋",
+        year: 1988
+    };
+    console.log(fn.c);
 });
