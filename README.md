@@ -16,3 +16,6 @@ To install the node packages, and also keep them updated, execute the following 
 > gulp overlord
 ```
 
+## License
+
+The MIT License(http://opensource.org/licenses/MIT) 请自由地享受和参与开源
