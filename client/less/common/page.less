@@ -1,0 +1,306 @@
+#parallax_wrapper {
+  height: 400px;
+  width: 800px;
+  margin: 20px auto;
+  border-radius: 36%;
+  background: url('../../images/icons/404.png') center no-repeat;
+}
+
+.commonInput {
+  height: 30px;
+  font-size: 16px;
+  color: #333;
+  text-indent: 10px;
+}
+
+.backCloth {
+  background: #000;
+  opacity: 0.7;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+#background {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  top: 0px;
+  z-index: 2;
+  left: 0px;
+}
+
+.layout-myName {
+  position: relative;
+  right: -5px;
+  top: -30px;
+  display: inline-block;
+}
+
+.indexTitle {
+  color: #666;
+  margin: @defautPadding 0;
+  display: inline-block;
+  font-size: 22px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.indexContent {
+  width: 1100px;
+  position: relative;
+  text-align: center;
+  margin: 40px auto;
+  min-height: 423px;
+  h1 {
+    margin: @defautPadding * 4 @defautPadding * 2;
+    color: @defaultColor;
+  }
+}
+
+.gameContent {
+  .indexContent;
+  margin-top: 0px;
+}
+
+article {
+  .indexContent;
+  h1 {
+    font-size: 2em;
+    color: @defaultColor;
+  }
+  .imgBlock {
+    position: absolute;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    top: 0px;
+    img {
+      position: absolute;
+      left: 0;
+      width: 80px;
+      height: 80px;
+    }
+  }
+  .imgBlockLeft {
+    left: 80px;
+  }
+  .imgBlockRight {
+    right: 80px;
+  }
+}
+
+.articleTitle {
+  display: inline-block;
+  margin: @defautPadding 0 @defautPadding*2;
+  font-size: 15px;
+}
+
+.defautFont {
+  .white;
+  font-size: 16px;
+}
+
+.largeFont {
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.book {
+  width: 340px;
+  height: 230px;
+  margin: auto;
+  &:hover .book__cover {
+    -webkit-transform: perspective(1000px) rotateX(70deg) scale(0.85);
+  }
+  &:hover .book__cover:before {
+    opacity: 1;
+    -webkit-transform: rotateX(0) translateZ(-30px) scale(0.52);
+  }
+}
+
+.book__cover {
+  background: url("../../images/icons/avatar.png") no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  position: relative;
+  transition: all .4s;
+  -webkit-transform: perspective(1000px) rotateX(0);
+  -webkit-transform-origin: bottom;
+  -webkit-transform-style: preserve-3d;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transform: rotateX(90deg) translateZ(-50px) scale(0.54);
+    -webkit-transform-origin: bottom;
+    transition: all .4s;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 40px 120px rgba(0, 0, 0, 0.5);
+    opacity: 0.2;
+  }
+}
+
+.book__back {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #4d4e53;
+  background-size: 100% 100%;
+  -webkit-transform: rotateX(-90deg);
+  -webkit-transform-origin: top;
+}
+
+.sendInformation {
+  line-height: 50px;
+  height: 52px;
+  position: relative;
+}
+
+#datepicker1, #datepicker2 {
+  .commonInput;
+  width: 200px;
+}
+
+#tags {
+  .commonInput;
+  width: 500px;
+}
+
+#popDialog {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background: #ddd;
+  border: 0;
+  border-radius: 50%;
+  position: relative;
+  top: -2px;
+  color: #666;
+  font-weight: 700;
+}
+
+.ui-dialog {
+  position: fixed;
+  z-index: 1000 !important;
+  top: 200px !important;
+}
+
+#accordion, #slider-range {
+  width: 550px;
+  margin: 10px auto;
+}
+
+#tabs {
+  width: 800px;
+  margin: 10px auto;
+}
+
+.popLink {
+  display: inline-block;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  width: 80px;
+  border: 0;
+  border-radius: 4px;
+  color: #fff !important;
+  font-size: 16px;
+  background: #3d6bfb;
+  margin: 15px;
+}
+
+#amount {
+  width: 78px;
+}
+
+#progressbar {
+  width: 400px;
+  height: 36px;
+  left: -200px;
+  top: 250px;
+  margin-left: 50%;
+  position: fixed;
+  line-height: 35px;
+  text-align: center;
+  z-index: 1000;
+  .progress-label {
+    position: absolute;
+    left: 170px;
+  }
+}
+
+.ui-selectmenu-button {
+  width: 220px !important;
+  .no-border-radius;
+}
+
+.ui-spinner {
+  width: 160px;
+  .no-border-radius;
+}
+
+.checked-go {
+  margin: 20px auto;
+  background: @defaultColor !important;
+  color: #fff !important;
+  width: 550px !important;
+}
+
+.ui-state-active {
+  background: @defaultColor !important;
+  border: 1px solid @defaultColor !important;
+}
+
+.timer {
+  color: #999 !important;
+}
+
+.aboutArticle {
+  font-size: 20px;
+  color: #333;
+}
+
+.article-tabs {
+  text-align: left;
+  p {
+    text-indent: 2em;
+  }
+}
+
+.popInput {
+  width: 100%;
+  text-indent: 10px;
+  color: #999;
+}
+
+#tab_title {
+  .popInput;
+  height: 30px;
+}
+
+#tab_content {
+  .popInput;
+  margin-top: 10px;
+  height: 60px;
+}
+
+#tabs-1 {
+  p {
+    text-align: left;
+    text-indent: 20px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
