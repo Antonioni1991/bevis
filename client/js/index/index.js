@@ -49,8 +49,20 @@ $(function () {
         alert(123);
     };
     fn.c = {
-        name: "王福朋",
+        name: "shenhao",
         year: 1988
     };
     console.log(fn.c);
+
+    function Fn() {
+    }
+
+    Fn.prototype.name = 'shenhao';
+    Fn.prototype.getYear = function () {
+        return 1988;
+    };
+
+    var fn = new Fn();
+    console.log('aaa', fn.name);
+    console.log('bbb', fn.getYear());
 });
