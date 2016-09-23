@@ -1,3 +1,5 @@
+console.log('window', this);    //在全局环境下，this永远是window
+
 $(function () {
     // this is for slider
     $('#myCarousel').carousel({
@@ -65,4 +67,29 @@ $(function () {
     var fn = new Fn();
     console.log('aaa', fn.name);
     console.log('bbb', fn.getYear());
+
+    var obj = {
+        x : 10,
+        a : function () {
+            console.log('this', this);
+            console.log(this.x);
+        }
+    };
+    obj.a();
+
+    // 要到创建这个函数的那个作用域中取值
+    var zuo = 10;
+    function zuofn () {
+        console.log('zuo1', zuo);
+    };
+    function show1(a) {
+        var zuo = 20;
+        a();   // log 10, 因为创建zuofn函数的作用域是全局作用域, 无论fn函数将在哪里调用
+    };
+    function show2() {
+        var zuo = 20;
+        console.log('zuo2', zuo);   // log 20, 因为创建这个函数的作用域是当前作用域
+    };
+    show1(zuofn);
+    show2();
 });
