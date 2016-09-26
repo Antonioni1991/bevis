@@ -76,7 +76,7 @@ $("#slider-range").slider({
 $("#amount").val("$" + $("#slider-range").slider( "values", 0 ) + " - $" + $("#slider-range").slider( "values", 1 ));
 
 $("#currency").selectmenu().on("change", function() {
-    $("#spinner").spinner("option", "culture", $( this ).val() );
+    $("#spinner").spinner("option", "culture", $( this ).val() )
 });
 
 $("#spinner" ).spinner({
@@ -98,14 +98,14 @@ $('.checked-go').on('click', function () {
         },
         complete: function() {
             progressLabel.text( "Complete!" );
-            location.reload();
+            location.reload()
         }
     });
     function progress() {
         var val = progressbar.progressbar( "value" ) || 0;
         progressbar.progressbar( "value", val + 2 );
         if ( val < 99 ) {
-            setTimeout( progress, 80 );
+            setTimeout( progress, 80 )
         }
     };
     setTimeout( progress, 1000 )

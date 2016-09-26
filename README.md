@@ -8,13 +8,23 @@ To install the node packages, and also keep them updated, execute the following 
 
 ```
 > npm install
+
 ```
 
 ## Running the server
 
 ```
 > gulp overlord
+
 ```
+
+## Run ESLint on any file or directory like this:
+
+```
+> $ ./node_modules/.bin/eslint filepath.js
+
+```
+
 
 ## License
 
